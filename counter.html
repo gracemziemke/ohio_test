@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/counter.css"
+
+	</head>
+
+	<body>
+
+	<div class="catcounter">
+		<img id="pugs" src="http://www.placepugs.com/600/500">
+		<h3>Pugs!</h3>
+
+		<div>
+			<button id="decrease"> - </button>
+			<button id="increase"> + </button>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		
+	var picIndex = 500;
+
+
+	$('button').click(function(){
+		if($(this).attr('id')==='increase'){
+			picIndex = picIndex + 1;
+		} else {
+			picIndex = picIndex - 1;
+		}
+		var url = "http://www.placepugs.com/600/" + picIndex;
+
+
+		$('#pugs').attr('src', url);
+	});
+
+
+
+	</script>
+
+
+
+
+
+	</body>
+
+</html>
